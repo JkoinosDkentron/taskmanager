@@ -1,12 +1,10 @@
 package com.example.taskmanager.infrastructure;
 
 import com.example.taskmanager.domain.Task;
-import com.example.taskmanager.domain.TaskRepository;
-import org.springframework.data.r2dbc.repository.R2dbcRepository;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import org.springframework.stereotype.Repository;
 
-// La interfaz R2dbcRepository proporciona operaciones CRUD reactivas
-public interface ReactiveTaskRepository extends R2dbcRepository<Task, String>, TaskRepository {
-    // Puedes definir consultas adicionales si fuera necesario
+@Repository
+public interface ReactiveTaskRepository extends ReactiveCrudRepository<Task, String> {
+    // Additional custom queries if necessary.
 }

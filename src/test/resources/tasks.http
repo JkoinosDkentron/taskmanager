@@ -1,0 +1,20 @@
+### Create a New Task
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title": "My First Task",
+  "description": "Learn Spring WebFlux",
+  "dueDate": "2025-04-30T12:00:00"
+}
+
+### Get All Tasks
+GET http://localhost:8080/tasks
+
+### Update Task Status
+# Replace {id} with an actual task id obtained from the GET response
+PATCH http://localhost:8080/tasks/{id}/status?status=COMPLETED
+
+### Delete a Task
+# Replace {id} with an actual task id obtained from the GET response
+DELETE http://localhost:8080/tasks/{id}

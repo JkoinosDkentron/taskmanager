@@ -1,5 +1,6 @@
-package com.example.taskmanager.domain;
+package com.example.taskmanager.domain.repository;
 
+import com.example.taskmanager.domain.Task;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
